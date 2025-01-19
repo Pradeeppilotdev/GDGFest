@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Google Sans', serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.common{
+    background: linear-gradient(45deg, #4286f48c, #34a85377, #fbbd058b, #ea44357e); 
+    background-size: 400% 400%; 
+    animation: gradientAnimation 15s ease infinite;
+   
+}
+@keyframes gradientAnimation { 
+0% { background-position: 0% 50%; } 
+50% { background-position: 100% 50%; } 
+100% { background-position: 0% 50%; } 
+}
+
+#gdgmainlogo {
+    height: 150px;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.eventbuttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:HSL(44.26, 100%, 47.8%);
+    gap: 120px;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.eventbuttons button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.25rem;
+    padding: 10px 20px;
+}
+
+.aboutsection {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.aboutsection h1 {
+    font-size: 4.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutsection p {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.774);
+}
+.aboutgdgfest{
+    margin-top: 150px;
+}
+.aboutgdgfest h2{
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+.aboutgdgfest p{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+
+
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .aboutsection h1 {
+        font-size: 2rem;
+    }
+
+    .aboutsection p {
+        font-size: 1.25rem;
+    }
+    .aboutgdgfest h2{
+        font-size: 2rem;
+    }
+    .aboutgdgfest p{
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    .eventbuttons {
+        gap: 10px;
+    }
+
+    .eventbuttons button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
