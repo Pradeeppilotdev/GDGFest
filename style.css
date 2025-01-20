@@ -9,12 +9,16 @@
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
    
+}
+.slider-wraper{
+    overflow: hidden;
 }
 .common{
     background-image:url(images/IMG_20250119_154914.jpg) ;
     background-size: cover;
-    background-attachment:scroll
+    background-attachment:scroll;
 }
 #gdgmainlogo {
     height: 180px;
@@ -108,7 +112,34 @@ body {
     align-items: center;
     font-size: 3rem;
 }
-
+.card-list .cards1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border: 1px solid rgba(0, 0, 0, 0.615);
+    background-color: rgba(15, 15, 15, 0.142);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 40px;
+    width: 400px;
+    margin-bottom: 50px;
+}
+.card-list .cards1 #googledevlogo{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid black;
+    padding: 4px;
+    transition: 0.2s ease;
+}
+.card-list .cards1 h3{
+    color: black;
+}
+.card-list .cards1 p{
+    color: black;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
