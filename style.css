@@ -10,22 +10,14 @@ body {
     display: flex;
     flex-direction: column;
    
-    
 }
 .common{
-    background: linear-gradient(45deg, #4286f48c, #34a85377, #fbbd058b, #ea44357e); 
-    background-size: 400% 400%; 
-    animation: gradientAnimation 15s ease infinite;
-   
+    background-image:url(images/IMG_20250119_154914.jpg) ;
+    background-size: cover;
+    background-attachment:scroll
 }
-@keyframes gradientAnimation { 
-0% { background-position: 0% 50%; } 
-50% { background-position: 100% 50%; } 
-100% { background-position: 0% 50%; } 
-}
-
 #gdgmainlogo {
-    height: 150px;
+    height: 180px;
     width: 100%;
     max-width: 500px;
     justify-content: center;
@@ -34,6 +26,8 @@ body {
 }
 
 .eventbuttons {
+    border: 1px solid black;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,9 +47,16 @@ body {
 }
 
 .aboutsection {
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 156px; 
+    margin: 156px;
+    background-color: #4285F4;
     margin-top: 60px;
     text-align: center;
 }
+
 
 .aboutsection h1 {
     font-size: 4.5rem;
@@ -73,12 +74,21 @@ body {
 }
 .aboutgdgfest{
     margin-top: 150px;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 156px; 
+    margin: 156px;
+    background-color: #F4B400;
+    margin-top: 60px;
+    text-align: center;
 }
 .aboutgdgfest h2{
     display: flex;
     font-size: 3rem;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
 }
 .aboutgdgfest p{
     display: flex;
@@ -88,6 +98,15 @@ body {
     color: rgba(0, 0, 0, 0.762);
 
 
+}
+.Events{
+    margin-top: 150px;
+}
+.Events h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 }
 
 
