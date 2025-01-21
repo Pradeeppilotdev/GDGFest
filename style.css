@@ -16,9 +16,7 @@ body {
     overflow: hidden;
 }
 .common{
-    background-image:url(images/IMG_20250119_154914.jpg) ;
-    background-size: cover;
-    background-attachment:scroll;
+    
 }
 #gdgmainlogo {
     height: 180px;
