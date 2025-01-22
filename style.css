@@ -212,4 +212,7 @@ body {
     .card-list .cards1 {
         width: 100%;
     }
+    .card-list .cards1 {
+        box-shadow: none;
+    }
 }
