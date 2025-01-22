@@ -10,9 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-   
 }
-.slider-wraper{
+
+.slider-wraper {
     overflow: hidden;
 }
 
@@ -31,10 +31,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:HSL(44.26, 100%, 47.8%);
-    gap: 120px;
+    background-color: HSL(44.26, 100%, 47.8%);
+    gap: 2rem;
     font-weight: 400;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding: 1rem;
 }
 
 .eventbuttons button {
@@ -43,86 +44,85 @@ body {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0);
     font-size: 1.25rem;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
 }
 
 .aboutsection {
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 3px rgb(18, 18, 18);
-    padding: 156px; 
-    margin: 156px;
+    padding: 10rem;
+    margin: 10rem;
     background-color: #4285F4;
-    margin-top: 60px;
     text-align: center;
 }
 
-
 .aboutsection h1 {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .aboutsection p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgba(0, 0, 0, 0.774);
 }
-.aboutgdgfest{
-    margin-top: 150px;
+
+.aboutgdgfest {
+    margin-top: 2rem;
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 3px rgb(18, 18, 18);
-    padding: 156px; 
-    margin: 156px;
+    padding: 10rem;
+    margin: 10rem;
     background-color: #F4B400;
-    margin-top: 60px;
-    
-}
-.aboutgdgfest h2{
-    display: flex;
-    font-size: 3rem;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    margin-top: 60px;
     text-align: center;
 }
-.aboutgdgfest p{
+
+.aboutgdgfest h2 {
     display: flex;
     font-size: 2rem;
     align-items: center;
     justify-content: center;
-    color: rgba(0, 0, 0, 0.762);
-
-
+    margin-bottom: 1rem;
 }
-.Events{
-    margin-top: 150px;
+
+.aboutgdgfest p {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+}
+
+.Events {
+    margin-top: 2rem;
     background-color: #0F9D58;
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 3px rgb(18, 18, 18);
-    padding: 156px; 
-    margin: 156px;
+    padding: 10rem;
+    margin: 10rem;
 }
+
 .Events h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-}
-.slider-wraper{
-    overflow: hidden;
-    max-width: 1200px;
-    margin: 0 70px 55px;
+    font-size: 2rem;
 }
 
-.card-list .cards1{
+.slider-wraper {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card-list .cards1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,30 +131,54 @@ body {
     background-color: hsla(0, 0%, 100%, 0.681);
     box-shadow: 10px 10px 3px rgb(18, 18, 18);
     border-radius: 10px;
-    padding: 20px;
-    width: 600px;
-    margin-bottom: 50px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
 }
-.card-list .cards1 #googledevlogo{
+
+.card-list .cards1 #googledevlogo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-bottom: 40px;
+    margin-bottom: 1rem;
     border: 3px solid black;
-    padding: 4px;
+    padding: 0.25rem;
     transition: 0.2s ease;
 }
-.card-list .cards1 h3{
+
+.card-list .cards1 h3 {
     color: rgb(13, 13, 13);
 }
-.card-list .cards1 p{
+
+.card-list .cards1 p {
     color: rgba(22, 22, 22, 0.808);
     background-color: hsla(0, 0%, 100%, 0.793);
     border-radius: 15px;
+    padding: 0.5rem;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
+    #gdgmainlogo{
+        height: 120px;
+    }
+    .eventbuttons{
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .aboutsection{
+        padding: 2rem;
+        margin: 2rem;
+    }
+    .aboutgdgfest{
+        padding:2rem;
+        margin: 2rem;
+    }
+    .Events{
+        padding: 2rem;
+        margin: 2rem;
+    }
     .aboutsection h1 {
         font-size: 2rem;
     }
@@ -162,20 +186,30 @@ body {
     .aboutsection p {
         font-size: 1.25rem;
     }
-    .aboutgdgfest h2{
-        font-size: 2rem;
+
+    .aboutgdgfest h2 {
+        font-size: 1.5rem;
     }
-    .aboutgdgfest p{
+
+    .aboutgdgfest p {
         font-size: 1rem;
         justify-content: center;
     }
 
     .eventbuttons {
-        gap: 10px;
+        gap: 1rem;
     }
 
     .eventbuttons button {
         font-size: 1rem;
-        padding: 8px 16px;
+        padding: 0.5rem 1rem;
+    }
+
+    .Events h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-list .cards1 {
+        width: 100%;
     }
 }
