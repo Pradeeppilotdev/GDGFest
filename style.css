@@ -98,6 +98,30 @@ body {
     justify-content: center;
     color: rgba(0, 0, 0, 0.762);
 }
+.timer{
+    margin-top: 2rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 10rem;
+    margin: 10rem;
+    background-color: #DB4437;
+    text-align: center;
+}
+.timer h2{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.timer p{
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+}
 
 .Events {
     margin-top: 2rem;
@@ -116,6 +140,53 @@ body {
     font-size: 2rem;
 }
 
+.Agenda{
+    margin-top: 2rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 10rem;
+    margin: 10rem;
+    background-color: #c4bfbfb4;
+    text-align: center;
+}
+
+.Agenda h2{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.Agenda p{
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+}
+.maps{
+    margin-top: 2rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 3rem;
+    margin: 12rem;
+    background-color: #4285F4;
+    text-align: center;
+
+}
+.maps h2{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.maps iframe{
+    border-radius: 15px;
+}
 .slider-wraper {
     overflow: hidden;
     max-width: 100%;
@@ -154,7 +225,7 @@ body {
 .card-list .cards1 p {
     color: rgba(22, 22, 22, 0.808);
     background-color: hsla(0, 0%, 100%, 0.793);
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 0.5rem;
 }
 
@@ -175,9 +246,38 @@ body {
         padding:2rem;
         margin: 2rem;
     }
+    .timer{
+        padding:2rem;
+        margin:2rem;
+    }
     .Events{
         padding: 2rem;
         margin: 2rem;
+    }
+    .Agenda{
+        padding: 2rem;
+        margin:2rem;
+    }
+    .maps{
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .maps h2{
+        font-size: 1.5rem;
+    }
+    .maps iframe{
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+    .Agenda h2{
+        font-size: 1.5rem;
+    }
+    .Agenda p{
+        font-size: 1.25rem;
+    }
+    .timer h2{
+        font-size: 1.5rem;
     }
     .aboutsection h1 {
         font-size: 2rem;
