@@ -266,37 +266,45 @@ body {
         height: 120px;
     }
     .eventbuttons{
-        gap: 1rem;
+        gap:1rem;
         flex-wrap: wrap;
+        margin-bottom: 100px;
     }
     .aboutsection{
         padding: 2rem;
         margin: 2rem;
+        margin-bottom: 100px;
     }
     .aboutgdgfest{
         padding:2rem;
         margin: 2rem;
+        margin-bottom: 100px;
     }
     .timer{
         padding:2rem;
         margin:2rem;
+        margin-bottom: 100px;
     }
     .Events{
         padding: 2rem;
         margin: 2rem;
+        margin-bottom: 100px;
     }
     .Agenda{
+        
         padding: 2rem;
         margin:2rem;
+        margin-bottom: 100px;
     }
     .maps{
-        margin-top: 1rem;
         padding: 2rem;
         margin: 2rem;
+        margin-bottom: 100px;
     }
     .contact{
         padding: 2rem;
         margin: 2rem;
+        margin-bottom: 100px;
     }
     .contact h2{
         font-size: 1.5rem;
