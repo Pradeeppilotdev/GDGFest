@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .slider-wraper {
@@ -209,7 +210,7 @@ body {
     font-size: 2rem;
     align-items: center;
     justify-content: center;
-    color: rgb(252, 250, 250);
+    color: rgb(253, 251, 251);
 }
 .contact a{
     border: none;
@@ -260,14 +261,14 @@ body {
     padding: 0.5rem;
 }
 
-/* Media Queries */
+/*View for mobile devices*/
 @media (max-width: 768px) {
     #gdgmainlogo{
         height: 120px;
     }
     .eventbuttons{
-        gap:1rem;
-        flex-wrap: wrap;
+        gap: 1rem;
+        flex-wrap: none;
         margin-bottom: 100px;
     }
     .aboutsection{
