@@ -38,6 +38,46 @@ body {
     flex-wrap: nowrap;
     padding: 1rem;
 }
+.eventbuttons #bt1{
+    transition: 0.15s ease-in;
+    border-radius: 5px;
+}
+.eventbuttons #bt2{
+    transition: 0.15s ease-in;
+    border-radius: 5px;
+}
+.eventbuttons #bt3{
+    transition: 0.15s ease-in;
+    border-radius: 5px;
+}
+.eventbuttons #bt4{
+    transition: 0.15s ease-in;
+    border-radius: 5px;
+}
+.eventbuttons #bt1:hover{
+    background-color: #0F9D58;
+    border-radius: 7px;
+    transition: 0.15s ease-out;
+    color: white;
+}
+.eventbuttons #bt2:hover{
+    background-color: #4285F4;
+    border-radius: 7px;
+    transition: 0.15s ease-out;
+    color: white;
+}
+.eventbuttons #bt3:hover{
+    background-color: #DB4437;
+    border-radius: 7px;
+    transition: 0.15s ease-out;
+    color: white;
+}
+.eventbuttons #bt4:hover{
+    background-color: #0F9D58;
+    border-radius: 7px;
+    transition: 0.15s ease-out;
+    color: white;
+}
 
 .eventbuttons button {
     border: 0;
