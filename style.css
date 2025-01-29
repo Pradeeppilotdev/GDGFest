@@ -163,7 +163,35 @@ body {
     justify-content: center;
     color: rgba(0, 0, 0, 0.762);
 }
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+}
+.num{
+    background-color: rgba(255, 255, 255, 0.525);
+    backdrop-filter: blur(13px);
+    font-size: 4rem;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.1rem;
+    padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+}
+.num ::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.525);
+    height: 100%;
+    width: 50%;
+    left: 0;
+
+}
+.text{
+    font-size: 1.5rem;
+
+}
 .Events {
     margin-top: 2rem;
     background-color: #0F9D58;
