@@ -139,8 +139,12 @@ body {
     justify-content: center;
     color: rgba(0, 0, 0, 0.762);
 }
-.timer{
-    margin-top: 2rem;
+.timer {
+    display: flex;
+    flex-direction: row; /* Change to row direction */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 3px rgb(18, 18, 18);
@@ -149,6 +153,7 @@ body {
     background-color: #DB4437;
     text-align: center;
 }
+
 .timer h2{
     display: flex;
     font-size: 2rem;
@@ -163,35 +168,44 @@ body {
     justify-content: center;
     color: rgba(0, 0, 0, 0.762);
 }
-.box{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 
+.box {
+    display: flex;
+    flex-direction: row; /* Change to row direction */
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
 }
-.num{
+
+.num {
     background-color: rgba(255, 255, 255, 0.525);
     backdrop-filter: blur(13px);
     font-size: 4rem;
-    display: grid;
-    height: 100%;
-    width: 100%;
-    border-radius: 0.1rem;
-    padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Make circles */
+    width: 100px; /* Set width */
+    height: 100px; /* Set height */
+    position: relative;
+    flex-direction: column;
 }
-.num ::after{
+
+.num::after {
     content: "";
     position: absolute;
     background-color: rgba(255, 255, 255, 0.525);
     height: 100%;
     width: 50%;
     left: 0;
-
 }
-.text{
+
+.text {
     font-size: 1.5rem;
-
+    text-align: center;
+    margin-top: 0.5rem; /* Add margin to position text below */
 }
+
 .Events {
     margin-top: 2rem;
     background-color: #0F9D58;
@@ -349,11 +363,28 @@ body {
         margin: 2rem;
         margin-bottom: 100px;
     }
-    .timer{
-        padding:2rem;
-        margin:2rem;
-        margin-bottom: 100px;
+    .timer {
+        flex-direction: column; /* Change to column direction for mobile */
+        padding: 2rem;
+        margin: 2rem;
+        justify-content: center;
+        text-align: center;
     }
+
+    .box {
+        flex-direction: row; /* Change to row direction for mobile */
+        gap: 1rem;
+    }
+
+    .num {
+        width: 80px; /* Adjust width for mobile */
+        height: 80px; /* Adjust height for mobile */
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .text {
+        font-size: 1rem; /* Adjust font size for mobile */
+    
     .Events{
         padding: 2rem;
         margin: 2rem;
