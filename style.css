@@ -144,7 +144,7 @@ body {
     flex-direction: row; /* Change to row direction */
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 3px rgb(18, 18, 18);
@@ -191,18 +191,10 @@ body {
     flex-direction: column;
 }
 
-.num::after {
-    content: "";
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.525);
-    height: 100%;
-    width: 50%;
-    left: 0;
-}
-
 .text {
     font-size: 1.5rem;
     text-align: center;
+    justify-content: center;
     margin-top: 0.5rem; /* Add margin to position text below */
 }
 
