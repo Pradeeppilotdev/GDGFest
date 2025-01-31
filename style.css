@@ -363,22 +363,22 @@ body {
         flex-direction: column; /* Change to column direction for mobile */
         padding: 2rem;
         margin: 2rem;
-        justify-content: center;
-        text-align: center;
     }
-
-    .box {
+    .timer .box {
         flex-direction: row; /* Change to row direction for mobile */
-        gap: 1rem;
+        justify-content:center;
+        gap: 2rem;
+        align-items: center;
     }
 
-    .num {
+    .timer .num {
         width: 80px; /* Adjust width for mobile */
         height: 80px; /* Adjust height for mobile */
         font-size: 2rem; /* Adjust font size for mobile */
+        justify-content: none;
     }
 
-    .text {
+    .timer .text {
         font-size: 1rem; /* Adjust font size for mobile */
     }
     .Events{
