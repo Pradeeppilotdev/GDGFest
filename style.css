@@ -141,7 +141,8 @@ body {
 }
 .timer {
     display: flex;
-    flex-direction: row; /* Change to row direction */
+    flex: 1;
+    flex-direction:row; /* Change to row direction */
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -169,7 +170,7 @@ body {
     color: rgba(0, 0, 0, 0.762);
 }
 
-.box {
+.timer .box {
     display: flex;
     flex-direction: row; /* Change to row direction */
     justify-content: space-evenly;
@@ -177,7 +178,7 @@ body {
     gap: 2rem;
 }
 
-.num {
+.timer .num {
     background-color: rgba(255, 255, 255, 0.525);
     backdrop-filter: blur(13px);
     font-size: 4rem;
@@ -191,8 +192,10 @@ body {
     flex-direction: column;
 }
 
-.text {
-    font-size: 1.5rem;
+.timer .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
     text-align: center;
     justify-content: center;
     margin-top: 0.5rem; /* Add margin to position text below */
@@ -334,6 +337,7 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
 }
+
 
 /*View for mobile devices*/
 @media (max-width: 768px) {
