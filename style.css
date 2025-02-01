@@ -337,6 +337,24 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
 }
+.scroll-up {
+    display: flex;
+    float:right;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    background-color: #f4b300b1;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    backdrop-filter: blur(13px);
+    cursor: pointer;
+    margin-top: -13rem;
+}
+.scroll-up a{
+    text-decoration: none;
+}
+
+
 
 
 /*View for mobile devices*/
@@ -475,5 +493,12 @@ body {
     .card-list .cards1 {
         box-shadow: none;
     }
+    .scroll-up{
+        margin-right: -1rem;
+        margin-top: -5rem;
+        font-size: 1.1rem;
+        width: 39px;
+        height: 39px;
+    }   
 }
 
