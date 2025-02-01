@@ -359,27 +359,41 @@ body {
         margin: 2rem;
         margin-bottom: 100px;
     }
+  
     .timer {
         flex-direction: column; /* Change to column direction for mobile */
         padding: 2rem;
         margin: 2rem;
+        margin-bottom: 100px;
     }
     .timer .box {
         flex-direction: row; /* Change to row direction for mobile */
-        justify-content:center;
+        justify-content:none;
         gap: 2rem;
-        align-items: center;
+        align-items: none;
     }
 
     .timer .num {
-        width: 80px; /* Adjust width for mobile */
-        height: 80px; /* Adjust height for mobile */
-        font-size: 2rem; /* Adjust font size for mobile */
-        justify-content: none;
+        width: 50px; /* Adjust width for mobile */
+        height: 50px; /* Adjust height for mobile */
+        font-size: 1.5rem; /* Adjust font size for mobile */
+        justify-content:center;
+        align-items: center;
     }
 
     .timer .text {
-        font-size: 1rem; /* Adjust font size for mobile */
+        font-size: 1.2rem; /* Adjust font size for mobile */
+        align-items: center;
+        justify-content: center;
+    }
+    .box #day-box{
+        margin-right: 1.7rem;
+    }
+    .box #hr-box{
+        margin-right: 1.2rem;
+    }
+    .box #min-box{
+        margin-right: 0.3rem;
     }
     .Events{
         padding: 2rem;
