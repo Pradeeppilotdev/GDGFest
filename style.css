@@ -359,6 +359,9 @@ body {
 
 /*View for mobile devices*/
 @media (max-width: 768px) {
+    .common{
+        overflow-x: hidden;
+    }
     #gdgmainlogo{
         height: 120px;
     }
@@ -494,7 +497,7 @@ body {
         box-shadow: none;
     }
     .scroll-up{
-        margin-right: -1rem;
+        margin-right: 1rem;
         margin-top: -5rem;
         font-size: 1.1rem;
         width: 39px;
