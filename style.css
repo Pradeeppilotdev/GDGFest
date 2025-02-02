@@ -79,7 +79,7 @@ body {
     color: white;
 }
 .eventbuttons #bt4:hover{
-    background-color: #DB4437;
+    background-color: #4285F4;
     border-radius: 7px;
     transition: 0.15s ease-out;
     color: white;
