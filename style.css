@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@font-palette-values --mypalette{
+    font-family: 'Nabla';
+    base-palette: 3;
+    override-colors: 6 #FFB978;
+}
 * {
     margin: 0;
     padding: 0;
@@ -179,7 +185,11 @@ body {
 }
 
 .timer .num {
-    background-color: rgba(255, 255, 255, 0.525);
+    font-family: 'Nabla';
+    font-palette: --mypalette;
+    base-palette: 3;
+    override-colors: 6 #FFB978;
+    background-color: rgba(10, 10, 10, 0.525);
     backdrop-filter: blur(13px);
     font-size: 4rem;
     display: flex;
