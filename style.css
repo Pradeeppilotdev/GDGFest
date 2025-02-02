@@ -79,7 +79,7 @@ body {
     color: white;
 }
 .eventbuttons #bt4:hover{
-    background-color: #0F9D58;
+    background-color: #DB4437;
     border-radius: 7px;
     transition: 0.15s ease-out;
     color: white;
@@ -97,11 +97,30 @@ body {
 .aboutsection {
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 15px;
-    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    box-shadow: 10px 10px 3px rgb(6, 6, 6);
     padding: 10rem;
     margin: 10rem;
     background-color: #4285F4;
     text-align: center;
+}
+.aboutsection button{
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 2px solid rgb(12, 12, 12);
+    color: rgb(8, 8, 8);
+    border-radius: 35px;
+    width: 20%;
+    height: 40%;
+    background-color:#fdfcfc;
+    transition: 0.15s ease-in-out;
+}
+.aboutsection button:hover{
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
 }
 
 .aboutsection h1 {
@@ -279,7 +298,6 @@ body {
 .contact{
     margin-top: 2rem;
     background-color: #0F9D58;
-    border: 1.5px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 3px rgb(18, 18, 18);
     padding: 10rem;
@@ -294,17 +312,23 @@ body {
 }
 .contact p{
     display: flex;
+    gap: 1rem;
     font-size: 2rem;
+    text-align: center;
     align-items: center;
     justify-content: center;
     color: rgb(253, 251, 251);
 }
 .contact a{
-    border: none;
+    text-decoration:none;
     color: rgba(0, 0, 0, 0.637);
     outline: none;
     cursor: pointer;
     
+}
+.contactdetails{
+    background-color: #1414152c;
+    border-radius: 50px;
 }
 .slider-wraper {
     overflow: hidden;
@@ -390,6 +414,17 @@ body {
         margin: 2rem;
         margin-bottom: 100px;
     }
+    .aboutsection button{
+        border: 2px solid rgb(12, 12, 12);
+        color: rgb(8, 8, 8);
+        border-radius: 35px;
+        width: 20%;
+        height: 40%;
+        background-color:#fdfcfc;
+        font-size: 1.2rem;
+        width: 50%;
+        height: auto;
+    }
   
     .timer {
         flex-direction: column; /* Change to column direction for mobile */
@@ -451,7 +486,12 @@ body {
         font-size: 1.5rem;
     }
     .contact p{
-        font-size: 1rem;
+        gap:0rem;
+        font-size: 0.8rem;
+    }
+    .contactdetails{
+        background-color: #1414152c;
+        border-radius: 10px;
     }
     .maps h2{
         font-size: 1.5rem;
