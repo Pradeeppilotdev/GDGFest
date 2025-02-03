@@ -65,24 +65,36 @@ body {
     border-radius: 7px;
     transition: 0.15s ease-out;
     color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
 }
 .eventbuttons #bt2:hover{
     background-color: #4285F4;
     border-radius: 7px;
     transition: 0.15s ease-out;
     color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
 }
 .eventbuttons #bt3:hover{
     background-color: #DB4437;
     border-radius: 7px;
     transition: 0.15s ease-out;
     color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
 }
 .eventbuttons #bt4:hover{
     background-color: #4285F4;
     border-radius: 7px;
     transition: 0.15s ease-out;
     color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
 }
 
 .eventbuttons button {
@@ -319,16 +331,20 @@ body {
     justify-content: center;
     color: rgb(253, 251, 251);
 }
+.contact p:hover{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
 .contact a{
     text-decoration:none;
     color: rgba(0, 0, 0, 0.637);
     outline: none;
     cursor: pointer;
     
-}
-.contactdetails{
-    background-color: #1414152c;
-    border-radius: 50px;
 }
 .slider-wraper {
     overflow: hidden;
@@ -392,7 +408,7 @@ body {
 
 
 /*View for mobile devices*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .common{
         overflow-x: hidden;
     }
@@ -487,10 +503,11 @@ body {
     }
     .contact p{
         gap:0rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
-    .contactdetails{
-        background-color: #1414152c;
+    .contact p:hover{
+        color: black;
+        background-color: white;
         border-radius: 10px;
     }
     .maps h2{
