@@ -45,24 +45,38 @@ body {
     padding: 1rem;
 }
 .eventbuttons #bt1{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
     transition: 0.15s ease-in;
-    border-radius: 5px;
+    border-radius: 15px;
+
 }
 .eventbuttons #bt2{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
     transition: 0.15s ease-in;
-    border-radius: 5px;
+    border-radius: 15px;
+
 }
 .eventbuttons #bt3{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
     transition: 0.15s ease-in;
-    border-radius: 5px;
+    border-radius: 15px;
+
 }
 .eventbuttons #bt4{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
     transition: 0.15s ease-in;
-    border-radius: 5px;
+    border-radius: 15px;
+
 }
 .eventbuttons #bt1:hover{
+    cursor: pointer;
+    border:1px solid white;
     background-color: #0F9D58;
-    border-radius: 7px;
+    border-radius: 15px;
     transition: 0.15s ease-out;
     color: white;
     box-shadow: 5px 5px 3px rgb(18, 18, 18);
@@ -70,8 +84,10 @@ body {
     transform: translate(-0.2rem,-0.2ex);
 }
 .eventbuttons #bt2:hover{
+    cursor: pointer;
+    border:1px solid white;
     background-color: #4285F4;
-    border-radius: 7px;
+    border-radius: 15px;
     transition: 0.15s ease-out;
     color: white;
     box-shadow: 5px 5px 3px rgb(18, 18, 18);
@@ -79,8 +95,10 @@ body {
     transform: translate(-0.2rem,-0.2ex);
 }
 .eventbuttons #bt3:hover{
+    cursor: pointer;
+    border:1px solid white;
     background-color: #DB4437;
-    border-radius: 7px;
+    border-radius: 15px;
     transition: 0.15s ease-out;
     color: white;
     box-shadow: 5px 5px 3px rgb(18, 18, 18);
@@ -88,8 +106,10 @@ body {
     transform: translate(-0.2rem,-0.2ex);
 }
 .eventbuttons #bt4:hover{
+    cursor: pointer;
+    border:1px solid white;
     background-color: #4285F4;
-    border-radius: 7px;
+    border-radius: 15px;
     transition: 0.15s ease-out;
     color: white;
     box-shadow: 5px 5px 3px rgb(18, 18, 18);
