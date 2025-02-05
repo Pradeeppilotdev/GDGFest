@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@font-palette-values --mypalette{
+    font-family: 'Nabla';
+    base-palette: 3;
+    override-colors: 6 #FFB978;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Google Sans', serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.slider-wraper {
+    overflow: hidden;
+}
+
+#gdgmainlogo {
+    height: 180px;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.eventbuttons {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: HSL(44.26, 100%, 47.8%);
+    gap: 2rem;
+    font-weight: 400;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+.eventbuttons #bt1{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: 0.15s ease-in;
+    border-radius: 15px;
+
+}
+.eventbuttons #bt2{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: 0.15s ease-in;
+    border-radius: 15px;
+
+}
+.eventbuttons #bt3{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: 0.15s ease-in;
+    border-radius: 15px;
+
+}
+.eventbuttons #bt4{
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: 0.15s ease-in;
+    border-radius: 15px;
+
+}
+.eventbuttons #bt1:hover{
+    cursor: pointer;
+    border:1px solid white;
+    background-color: #0F9D58;
+    border-radius: 15px;
+    transition: 0.15s ease-out;
+    color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
+.eventbuttons #bt2:hover{
+    cursor: pointer;
+    border:1px solid white;
+    background-color: #4285F4;
+    border-radius: 15px;
+    transition: 0.15s ease-out;
+    color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
+.eventbuttons #bt3:hover{
+    cursor: pointer;
+    border:1px solid white;
+    background-color: #DB4437;
+    border-radius: 15px;
+    transition: 0.15s ease-out;
+    color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
+.eventbuttons #bt4:hover{
+    cursor: pointer;
+    border:1px solid white;
+    background-color: #4285F4;
+    border-radius: 15px;
+    transition: 0.15s ease-out;
+    color: white;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
+
+.eventbuttons button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.aboutsection {
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 35px;
+    box-shadow: 10px 10px 3px rgb(6, 6, 6);
+    padding: 10rem;
+    margin: 10rem;
+    background-color: #c3ecf6;
+    text-align: center;
+}
+.aboutsection button{
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 2px solid rgb(12, 12, 12);
+    color: rgb(8, 8, 8);
+    border-radius: 35px;
+    width: 20%;
+    height: 40%;
+    background-color:#fdfcfc;
+    transition: 0.15s ease-in-out;
+}
+.aboutsection button:hover{
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
+
+.aboutsection h1 {
+    display: flex;
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutsection p {
+    display: flex;
+    background-color: whitesmoke;
+    height: auto;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    
+}
+
+.aboutgdgfest {
+    margin-top: 2rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 10rem;
+    margin: 10rem;
+    background-color: #F4B400;
+    text-align: center;
+}
+
+.aboutgdgfest h2 {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.aboutgdgfest p {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+}
+.timer {
+    display: flex;
+    flex: 1;
+    flex-direction:column; 
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 35px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 10rem;
+    margin: 10rem;
+    background-color: #ffe7a5;
+    text-align: center;
+}
+.timer h1{
+    display: flex;
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timer h2{
+    display: flex;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.timer p{
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    height: auto;
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+}
+
+.timer .box {
+    display: flex;
+    flex-direction: row; /* Change to row direction */
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+.timer .num {
+    font-family: 'Nabla';
+    font-palette: --mypalette;
+    base-palette: 3;
+    override-colors: 6 #FFB978;
+    background-color: rgba(10, 10, 10, 0.525);
+    backdrop-filter: blur(13px);
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Make circles */
+    width: 100px; /* Set width */
+    height: 100px; /* Set height */
+    position: relative;
+    flex-direction: column;
+}
+
+.timer .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0.5rem; /* Add margin to position text below */
+}
+
+.Events {
+    margin-top: 2rem;
+    background-color: #0F9D58;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 10rem;
+    margin: 10rem;
+}
+
+.Events h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.Agenda{
+    margin-top: 2rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 10rem;
+    margin: 10rem;
+    background-color: #c4bfbfb4;
+    text-align: center;
+}
+
+.Agenda h2{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.Agenda p{
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.762);
+}
+.maps{
+    margin-top: 2rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 3rem;
+    margin: 10rem;
+    background-color: #4285F4;
+    
+
+}
+.maps h2{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.maps iframe{
+    border-radius: 15px;
+    width: 100%;
+}
+.contact{
+    margin-top: 2rem;
+    background-color: #0F9D58;
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 10rem;
+    margin: 10rem;
+}
+.contact h2{
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.contact p{
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgb(253, 251, 251);
+}
+.contact p:hover{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
+.contact a{
+    text-decoration:none;
+    color: rgba(0, 0, 0, 0.637);
+    outline: none;
+    cursor: pointer;
+    
+}
+.slider-wraper {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card-list .cards1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.615);
+    background-color: hsla(0, 0%, 100%, 0.681);
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+.card-list .cards1 button{
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: 60%;
+    height: 60%;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 2px solid rgb(12, 12, 12);
+    color: rgb(8, 8, 8);
+    border-radius: 35px;
+    background-color:#fdfcfc;
+    transition: 0.15s ease-in-out;
+}
+.card-list .cards1 button:hover{
+    box-shadow: 5px 5px 3px rgb(18, 18, 18);
+    transition: 0.15s ease-in-out;
+    transform: translate(-0.2rem,-0.2ex);
+}
+
+.card-list .cards1 #googledevlogo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid black;
+    padding: 0.25rem;
+    transition: 0.2s ease;
+}
+
+.card-list .cards1 h3 {
+    color: rgb(13, 13, 13);
+}
+
+.card-list .cards1 p {
+    color: rgba(22, 22, 22, 0.808);
+    background-color: hsla(0, 0%, 100%, 0.793);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.scroll-up {
+    display: flex;
+    float:right;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    background-color: #f4b300b1;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    backdrop-filter: blur(13px);
+    cursor: pointer;
+    margin-top: -13rem;
+}
+.scroll-up a{
+    text-decoration: none;
+}
+#design{
+    background-color:  #c3ecf6;
+}
+#paper{
+    background-color:  #ccf6c5;
+}
+#code{
+   background-color:  #ffe7a5;
+}
+#circuit{
+   background-color:  #f8d8d8;
+}
+#cyber{
+    background-color: #f0f0f0;
+}
+#graphic{
+    background-color:  #c3ecf6;
+}
+#freefire{
+    background-color:  #ccf6c5;
+}
+#connections{
+    background-color:  #ffe7a5;
+}
+#anime{
+    background-color:  #f8d8d8;
+}
+#WorkShop{
+    background-color:  #f0f0f0;
+
+}
+
+/*View for mobile devices*/
+@media (max-width: 1024px) {
+    .common{
+        overflow-x: hidden;
+    }
+    #gdgmainlogo{
+        height: 120px;
+    }
+    .eventbuttons{
+        gap: 1rem;
+        flex-wrap: none;
+        margin-bottom: 100px;
+    }
+    .aboutsection{
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 100px;
+    }
+    .aboutgdgfest{
+        padding:2rem;
+        margin: 2rem;
+        margin-bottom: 100px;
+    }
+    .aboutsection button{
+        border: 2px solid rgb(12, 12, 12);
+        color: rgb(8, 8, 8);
+        border-radius: 35px;
+        width: 20%;
+        height: 40%;
+        background-color:#fdfcfc;
+        font-size: 1.2rem;
+        width: 50%;
+        height: auto;
+    }
+  
+    .timer {
+        flex-direction: column; /* Change to column direction for mobile */
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 100px;
+    }
+    .timer .box {
+        flex-direction: row; /* Change to row direction for mobile */
+        justify-content:none;
+        gap: 2rem;
+        align-items: none;
+    }
+
+    .timer .num {
+        width: 50px; /* Adjust width for mobile */
+        height: 50px; /* Adjust height for mobile */
+        font-size: 1.5rem; /* Adjust font size for mobile */
+        justify-content:center;
+        align-items: center;
+    }
+
+    .timer .text {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+        align-items: center;
+        justify-content: center;
+    }
+    .box #day-box{
+        margin-right: 1.7rem;
+    }
+    .box #hr-box{
+        margin-right: 1.2rem;
+    }
+    .box #min-box{
+        margin-right: 0.3rem;
+    }
+    .Events{
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 100px;
+    }
+    .Agenda{
+        
+        padding: 2rem;
+        margin:2rem;
+        margin-bottom: 100px;
+    }
+    .maps{
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 100px;
+    }
+    .contact{
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 100px;
+    }
+    .contact h2{
+        font-size: 1.5rem;
+    }
+    .contact p{
+        gap:0rem;
+        font-size: 1rem;
+    }
+    .contact p:hover{
+        color: black;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .maps h2{
+        font-size: 1.5rem;
+    }
+    .maps iframe{
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+    .Agenda h2{
+        font-size: 1.5rem;
+    }
+    .Agenda p{
+        font-size: 1.25rem;
+    }
+    .timer h2{
+        font-size: 1.5rem;
+    }
+    .aboutsection h1 {
+        font-size: 2rem;
+    }
+
+    .aboutsection p {
+        font-size: 1.25rem;
+    }
+    .timer p{
+        font-size: 1.25rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .aboutgdgfest h2 {
+        font-size: 1.5rem;
+    }
+
+    .aboutgdgfest p {
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    .eventbuttons {
+        gap: 0.1rem;
+    }
+
+    .eventbuttons button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .Events h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-list .cards1 {
+        width: 100%;
+    }
+    .card-list .cards1 {
+        box-shadow: none;
+    }
+    .card-list .cards1 button{
+        font-size: 1rem;
+        width: 60%;
+        height: 60%;
+    }
+    .scroll-up{
+        margin-right: 1rem;
+        margin-top: -5rem;
+        font-size: 1.1rem;
+        width: 39px;
+        height: 39px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+      
+}
+
