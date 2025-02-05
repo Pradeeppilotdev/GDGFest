@@ -620,11 +620,11 @@ body {
 
     .aboutsection p {
         font-size: 1.25rem;
+        padding: 1rem;
     }
     .timer p{
         font-size: 1.25rem;
-        width: 100%;
-        height: auto;
+        padding: 1rem;
     }
 
     .aboutgdgfest h2 {
