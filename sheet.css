@@ -164,9 +164,9 @@ body {
 
 .aboutsection p {
     display: flex;
-    background-color: whitesmoke;
-    height: auto;
     width: 100%;
+    height: auto;
+    background-color: whitesmoke;
     border-radius: 25px;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
