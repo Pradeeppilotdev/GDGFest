@@ -125,11 +125,34 @@ body {
     font-size: 1.25rem;
     padding: 0.5rem 1rem;
 }
+.eventbuttons_tag {
+    font-size: 0.1rem;
+    border: 1px solid black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: HSL(44.26, 100%, 47.8%);
+    gap: 2rem;
+    font-weight: 100;
+    flex-wrap: nowrap;
+    padding:1rem;
+
+}
+.eventbuttons_tag h1{
+    font-weight: 250;
+}
 
 .aboutsection {
+    display: flex;
+    flex: 1;
+    flex-direction:column; 
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     border: 1.5px solid rgb(0, 0, 0);
     border-radius: 35px;
-    box-shadow: 10px 10px 3px rgb(6, 6, 6);
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
     padding: 10rem;
     margin: 10rem;
     background-color: #c3ecf6;
