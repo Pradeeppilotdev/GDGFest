@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() { 
   const swiper = new Swiper('.slider-wrapper', 
-    { loop: true, 
+    { loop: false, 
       grabCursor: true, 
       spaceBetween: 45, 
       pagination: { 
@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
       navigation: { 
         nextEl: '.swiper-button-next', 
         prevEl: '.swiper-button-prev', }, 
+      scrollbar: {
+          el: '.swiper-scrollbar',
+        },
       breakpoints: 
       { 
         0: { slidesPerView: 1 }, 
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         1024: { slidesPerView: 3 } 
       } 
     }); 
+
   });
 
  
