@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>GDGFEST REGISTRATION FORM</h1>
-    <form id="gdgForm" action="https://script.google.com/macros/s/AKfycbxB9zwPkqu6ND3ggCdhOHDyN4zjO3B0shbBku-hQLI7cfA2NUTU7vMeYI-NfToOqBXMtA/exec" method="POST">
+    <form id="gdgForm" action="https://script.google.com/macros/s/AKfycbxFOOjbpz964PWvDKZ5_RtBHrAzDyQSISqtGARsTTvbJkeAg9Kj5mDdWYn9jvCSfPo3zQ/exec" method="POST">
         <label for="Name">Name:</label><br>
         <input type="text" id="Name" name="entry.667900740" required><br><br>
 
@@ -30,7 +30,7 @@
 
         <div class="radio-group">
             <input type="radio" id="Flagship Event + All Events (Includes Workshop) - ₹250" name="entry.387616278" value="Flagship Event + All Events (Includes Workshop) - ₹250" required>
-            <label for="Flagship Event + All Events (Includes Workshop) - ₹250">Flagship event+ all events (includes workshop) ₹250</label>
+            <label for="Flagship Event + All Events (Includes Workshop) - ₹250">Flagship Event + All Events (Includes Workshop) - ₹250</label>
         </div>
 
         <div class="radio-group">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Technical & Non-Technical Events + Workshop - ₹200" name="entry.387616278" value="Technical & non-technical + workshop ₹200">
+            <input type="radio" id="Technical & Non-Technical Events + Workshop - ₹200" name="entry.387616278" value="Technical & Non-Technical Events + Workshop - ₹200">
             <label for="Technical & Non-Technical Events + Workshop - ₹200">Technical & Non-Technical Events + Workshop - ₹200</label>
         </div>
 
@@ -56,9 +56,9 @@
         <div class="radio-group">
             <input type="radio" id="One Technical & one Non-Technical Events - ₹150" name="entry.387616278" value="One Technical & one Non-Technical Events - ₹150">
             <label for="One Technical & one Non-Technical Events - ₹150">One Technical & one Non-Technical Events - ₹150</label>
-        </div><br><br>
+        </div>
 
-        <label>Flagship Events (Select any one or none):</label><br><br>
+        <label>Flagship Events (Select any one or None):</label><br>
 
         <div class="radio-group">
             <input type="radio" id="Designathon" name="entry.1226801076" value="Designathon">
@@ -73,9 +73,9 @@
         <div class="radio-group">
             <input type="radio" id="None" name="entry.1226801076" value="None">
             <label for="None">None</label>
-        </div><br><br>
+        </div>
 
-        <label>Technical Events (Select any one or none):</label><br><br>
+        <label>Technical Events (Select any one or None):</label><br>
 
         <div class="radio-group">
             <input type="radio" id="Capture the Flag (CTF)" name="entry.577969518" value="Capture the Flag (CTF)">
@@ -95,38 +95,71 @@
         <div class="radio-group">
             <input type="radio" id="None_1" name="entry.577969518" value="None">
             <label for="None_1">None</label>
-        </div><br><br>
+        </div>
 
-        <label>Non-technical Events:</label><br><br>
+        <label>Non-technical Events:</label><br>
 
         <div class="radio-group">
-            <input type="radio" id="Graphic design" name="entry.1034072283" value="Graphic design">
-            <label for="Graphic design">Graphic design</label>
+            <input type="radio" id="Graphic Design" name="entry.1034072283" value="Graphic Design">
+            <label for="Graphic Design">Graphic Design</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Free fire" name="entry.1034072283" value="Free fire">
-            <label for="Free fire">Free fire</label>
+            <input type="radio" id="Free Fire" name="entry.1034072283" value="Free Fire">
+            <label for="Free Fire">Free Fire</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Anime quiz" name="entry.1034072283" value="Anime quiz">
-           <label for="Anime quiz">Anime quiz</label>
+            <input type="radio" id="Anime Quiz" name="entry.1034072283" value="Anime Quiz">
+            <label for="Anime Quiz">Anime Quiz</label>
         </div>
-        
+
         <div class="radio-group">
             <input type="radio" id="Connections" name="entry.1034072283" value="Connections">
-           <label for="Connections">Connections</label>
-        </div>
-        
-        <div class="radio-group">
-            <input type="radio" id="None_2" name="entry.1034072283" value="None">
-           <label for="None">None</label>
+            <label for="Connections">Connections</label>
         </div>
 
-        <div class="Submit">
-            <input type="submit" value="submit">
+        <div class="radio-group">
+            <input type="radio" id="None_3" name="entry.1034072283" value="None">
+            <label for="None_3">None</label>
         </div>
+
+        <input type="submit" value="Submit">
     </form>
+
+    <div id="thankYouMessage" style="display:None;">
+        <p>Your response has been recorded. Thank you!</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#gdgForm').submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                var formData = $(this).serialize(); // Serialize the form data
+
+                console.log('Submitting form data: ', formData); // Debugging: Log form data
+
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr('action'),
+                    data: formData,
+                    success: function(response) {
+                        console.log('Form successfully submitted', response); // Debugging: Log successful response
+                        $('#thankYouMessage').show();
+                        $('#gdgForm').hide(); // Hide the form after successful submission
+                        
+                        // Redirect to another page after a delay (3 seconds)
+                        setTimeout(function() {
+                            window.location.href = "https://gdg-fest.vercel.app/"; // Change this URL to your desired redirect page
+                        }, 3000);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Form submission error:', xhr, status, error); // Debugging: Log error details
+                        alert('There was an error submitting the form. Please try again.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
