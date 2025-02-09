@@ -5,70 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDGFEST</title>
     <link rel="icon" href="images/Untitled design (3).png" type="image/x-icon">
+    <link rel="stylesheet" href="form.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>GDGFEST REGISTRATION FORM</h1>
-    <form id="gdgForm" action="https://script.google.com/macros/s/AKfycbyQaTID6OYV--cO9iHWWOULON6A1e1vlJBa6QYg6_u6UxxLf4z4Xqd7-4eusjQF8-Bv/exec" method="POST">
+    <form id="gdgForm" action="https://script.google.com/macros/s/AKfycbxB9zwPkqu6ND3ggCdhOHDyN4zjO3B0shbBku-hQLI7cfA2NUTU7vMeYI-NfToOqBXMtA/exec" method="POST">
         <label for="Name">Name:</label><br>
         <input type="text" id="Name" name="entry.667900740" required><br><br>
+
         <label for="Mailid">Mail:</label><br>
         <input type="email" id="Mailid" name="entry.62233316" required><br><br>
+
         <label for="Mobilenumber">Mobile Number:</label>
         <input type="tel" id="Mobilenumber" name="entry.114232771" required><br><br>
+
         <label for="College">College Name:</label><br>
         <input type="text" id="College" name="entry.1364589753" required><br><br>
-        <label for="Deptyear">Department/Year:</label><br>
+
+        <label for="Deptyear">Department/Year (ex: CSE/II):</label><br>
         <input type="text" id="Deptyear" name="entry.1443593806" required><br><br>
-        <label>Event you wish to participate (Per Person):</label><br>
-        <input type="radio" id="Flagship event+ all events (includes workshop) ₹250" name="entry.387616278" value="Flagship event+ all events (includes workshop) ₹250" required><br><br>
-        <label for="Flagship event+ all events (includes workshop) ₹250">Flagship event+ all events (includes workshop) ₹250</label><br>
-        <input type="radio" id="Flagship event + all events (excludes workshop) ₹200" name="entry.387616278" value="Flagship event + all events (excludes workshop) ₹200"><br><br>
-        <label for="Flagship event + all events (excludes workshop) ₹200">Flagship event + all events (excludes workshop) ₹200</label><br>
-        <input type="radio" id="Flagship events + workshop ₹200" name="entry.387616278" value="Flagship events + workshop ₹200"><br><br>
-        <label for="Flagship events + workshop ₹200">Flagship events + workshop ₹200</label><br>
-        <input type="radio" id="Technical & non-technical + workshop ₹200" name="entry.387616278" value="Technical & non-technical + workshop ₹200"><br><br>
-        <label for="Technical & non-technical + workshop ₹200">Technical & non-technical + workshop ₹200</label><br>
-        <input type="radio" id="Technical and non-technical events ₹150" name="entry.387616278" value="Technical and non-technical events ₹150"><br><br>
-        <label for="Technical and non-technical events ₹150">Technical and non-technical events ₹150</label><br>
-        <input type="radio" id="Only workshop ₹150" name="entry.387616278" value="Only workshop ₹150"><br><br>
-        <label for="Only workshop ₹150">Only workshop ₹150</label><br>
-        <input type="submit" value="Submit">
+
+        <label>Event Packages (Per Person):</label><br>
+
+        <div class="radio-group">
+            <input type="radio" id="Flagship Event + All Events (Includes Workshop) - ₹250" name="entry.387616278" value="Flagship Event + All Events (Includes Workshop) - ₹250" required>
+            <label for="Flagship Event + All Events (Includes Workshop) - ₹250">Flagship event+ all events (includes workshop) ₹250</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Flagship Event + All Events (Excludes Workshop) - ₹200" name="entry.387616278" value="Flagship Event + All Events (Excludes Workshop) - ₹200">
+            <label for="Flagship Event + All Events (Excludes Workshop) - ₹200">Flagship Event + All Events (Excludes Workshop) - ₹200</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Flagship Events + Workshop - ₹200" name="entry.387616278" value="Flagship Events + Workshop - ₹200">
+            <label for="Flagship Events + Workshop - ₹200">Flagship Events + Workshop - ₹200</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Technical & Non-Technical Events + Workshop - ₹200" name="entry.387616278" value="Technical & non-technical + workshop ₹200">
+            <label for="Technical & Non-Technical Events + Workshop - ₹200">Technical & Non-Technical Events + Workshop - ₹200</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Only Workshop - ₹150" name="entry.387616278" value="Only Workshop - ₹150">
+            <label for="Only Workshop - ₹150">Only Workshop - ₹150</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="One Technical & one Non-Technical Events - ₹150" name="entry.387616278" value="One Technical & one Non-Technical Events - ₹150">
+            <label for="One Technical & one Non-Technical Events - ₹150">One Technical & one Non-Technical Events - ₹150</label>
+        </div><br><br>
+
+        <label>Flagship Events (Select any one or none):</label><br><br>
+
+        <div class="radio-group">
+            <input type="radio" id="Designathon" name="entry.1226801076" value="Designathon">
+            <label for="Designathon">Designathon</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Paper Presentation" name="entry.1226801076" value="Paper Presentation">
+            <label for="Paper Presentation">Paper Presentation</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="None" name="entry.1226801076" value="None">
+            <label for="None">None</label>
+        </div><br><br>
+
+        <label>Technical Events (Select any one or none):</label><br><br>
+
+        <div class="radio-group">
+            <input type="radio" id="Capture the Flag (CTF)" name="entry.577969518" value="Capture the Flag (CTF)">
+            <label for="Capture the Flag (CTF)">Capture the Flag (CTF)</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Code Combat" name="entry.577969518" value="Code Combat">
+            <label for="Code Combat">Code Combat</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Circuit Board" name="entry.577969518" value="Circuit Board">
+            <label for="Circuit Board">Circuit Board</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="None_1" name="entry.577969518" value="None">
+            <label for="None_1">None</label>
+        </div><br><br>
+
+        <label>Non-technical Events:</label><br><br>
+
+        <div class="radio-group">
+            <input type="radio" id="Graphic design" name="entry.1034072283" value="Graphic design">
+            <label for="Graphic design">Graphic design</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Free fire" name="entry.1034072283" value="Free fire">
+            <label for="Free fire">Free fire</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" id="Anime quiz" name="entry.1034072283" value="Anime quiz">
+           <label for="Anime quiz">Anime quiz</label>
+        </div>
+        
+        <div class="radio-group">
+            <input type="radio" id="Connections" name="entry.1034072283" value="Connections">
+           <label for="Connections">Connections</label>
+        </div>
+        
+        <div class="radio-group">
+            <input type="radio" id="None_2" name="entry.1034072283" value="None">
+           <label for="None">None</label>
+        </div>
+
+        <div class="Submit">
+            <input type="submit" value="submit">
+        </div>
     </form>
-
-    <div id="thankYouMessage" style="display:none;">
-        <p>Your response has been recorded. Thank you!</p>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            $('#gdgForm').submit(function(event) {
-                event.preventDefault(); // Prevent the default form submission
-                var formData = $(this).serialize(); // Serialize the form data
-
-                console.log('Submitting form data: ', formData); // Debugging: Log form data
-
-                $.ajax({
-                    type: "POST",
-                    url: $(this).attr('action'),
-                    data: formData,
-                    success: function(response) {
-                        console.log('Form successfully submitted', response); // Debugging: Log successful response
-                        $('#thankYouMessage').show();
-                        $('#gdgForm').hide(); // Hide the form after successful submission
-                        
-                        // Redirect to another page after a delay (3 seconds)
-                        setTimeout(function() {
-                            window.location.href = "https://www.example.com/thank-you"; // Change this URL to your desired redirect page
-                        }, 3000);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('Form submission error:', xhr, status, error); // Debugging: Log error details
-                        alert('There was an error submitting the form. Please try again.');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
