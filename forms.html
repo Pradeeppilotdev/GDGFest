@@ -56,68 +56,67 @@
         <label>Flagship Events (Select any one or None):</label><br>
 
         <div class="radio-group">
-            <input type="radio" id="Designathon" name="entry.1226801076" value="Designathon">
+            <input type="checkbox" id="Designathon" name="entry.1226801076" value="Designathon">
             <label for="Designathon">Designathon</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Paper Presentation" name="entry.1226801076" value="Paper Presentation">
+            <input type="checkbox" id="Paper Presentation" name="entry.1226801076" value="Paper Presentation">
             <label for="Paper Presentation">Paper Presentation</label>
         </div>
 
-        <div class="radio-group">
-            <input type="radio" id="None" name="entry.1226801076" value="None">
-            <label for="None">None</label>
-        </div>
+
 
         <label>Technical Events (Select any one or None):</label><br>
 
         <div class="radio-group">
-            <input type="radio" id="Capture the Flag (CTF)" name="entry.577969518" value="Capture the Flag (CTF)">
+            <input type="checkbox" id="Capture the Flag (CTF)" name="entry.577969518" value="Capture the Flag (CTF)">
             <label for="Capture the Flag (CTF)">Capture the Flag (CTF)</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Code Combat" name="entry.577969518" value="Code Combat">
+            <input type="checkbox" id="Code Combat" name="entry.577969518" value="Code Combat">
             <label for="Code Combat">Code Combat</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Circuit Board" name="entry.577969518" value="Circuit Board">
+            <input type="checkbox" id="Circuit Board" name="entry.577969518" value="Circuit Board">
             <label for="Circuit Board">Circuit Board</label>
         </div>
 
-        <div class="radio-group">
-            <input type="radio" id="None_1" name="entry.577969518" value="None">
-            <label for="None_1">None</label>
+        <!-- Warning for technical events -->
+        <div id="technicalWarning" class="warning-message" style="display: none;">
+            ⚠️ Note: Code Combat and Circuit Board are scheduled at the same time slot
         </div>
 
         <label>Non-technical Events:</label><br>
 
         <div class="radio-group">
-            <input type="radio" id="Graphic Design" name="entry.1034072283" value="Graphic Design">
+            <input type="checkbox" id="Graphic Design" name="entry.1034072283" value="Graphic Design">
             <label for="Graphic Design">Graphic Design</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Free Fire" name="entry.1034072283" value="Free Fire">
+            <input type="checkbox" id="Free Fire" name="entry.1034072283" value="Free Fire">
             <label for="Free Fire">Free Fire</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Anime Quiz" name="entry.1034072283" value="Anime Quiz">
+            <input type="checkbox" id="Anime Quiz" name="entry.1034072283" value="Anime Quiz">
             <label for="Anime Quiz">Anime Quiz</label>
         </div>
 
         <div class="radio-group">
-            <input type="radio" id="Connections" name="entry.1034072283" value="Connections">
+            <input type="checkbox" id="Connections" name="entry.1034072283" value="Connections">
             <label for="Connections">Connections</label>
         </div>
 
-        <div class="radio-group">
-            <input type="radio" id="None_3" name="entry.1034072283" value="None">
-            <label for="None_3">None</label>
+        <!-- Warning for non-technical events -->
+        <div id="nonTechnicalWarning" class="warning-message" style="display: none;">
+            ⚠️ Note: Anime Quiz and Connections are scheduled at the same time slot
         </div>
+
+
 
         <!-- Add payment section -->
         <div id="paymentSection" style="display: none;">
@@ -177,7 +176,7 @@
                 }
 
                 const options = {
-                    key: 'rzp_live_H265JQ8SGsz6MH', // Replace with your Razorpay key
+                    key: 'rzp_live_rl6o58GFc5cY5z', // Replace with your Razorpay key
                     amount: amount,
                     currency: 'INR',
                     name: 'GDGFEST',
@@ -205,14 +204,8 @@
 
             // Form submission
             $('#gdgForm').submit(function(event) {
-                if (!paymentComplete) {
-                    event.preventDefault();
-                    alert('Please complete the payment first');
-                    return;
-                }
-
-                event.preventDefault();
-                var formData = $(this).serialize();
+                event.preventDefault(); // Prevent the default form submission
+                var formData = $(this).serialize(); // Serialize the form data
 
                 console.log('Submitting form data: ', formData); // Debugging: Log form data
 
@@ -235,6 +228,30 @@
                         alert('There was an error submitting the form. Please try again.');
                     }
                 });
+            });
+
+            // Check for conflicting technical events
+            $('input[name="entry.577969518"]').change(function() {
+                const codeCombat = $('#Code\\ Combat').is(':checked');
+                const circuitBoard = $('#Circuit\\ Board').is(':checked');
+                
+                if (codeCombat && circuitBoard) {
+                    $('#technicalWarning').show();
+                } else {
+                    $('#technicalWarning').hide();
+                }
+            });
+
+            // Check for conflicting non-technical events
+            $('input[name="entry.1034072283"]').change(function() {
+                const animeQuiz = $('#Anime\\ Quiz').is(':checked');
+                const connections = $('#Connections').is(':checked');
+                
+                if (animeQuiz && connections) {
+                    $('#nonTechnicalWarning').show();
+                } else {
+                    $('#nonTechnicalWarning').hide();
+                }
             });
         });
     </script>

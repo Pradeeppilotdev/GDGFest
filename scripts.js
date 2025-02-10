@@ -59,5 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('touchend', function() {
     swiperContainer.classList.remove('grabbing');
   });
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const knowMoreButtons = document.querySelectorAll('a[data-title]');
+    knowMoreButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const title = this.getAttribute('data-title');
+            window.location.href = `eventindetail.html?title=${encodeURIComponent(title)}`;
+        });
+    });
 });
 
+  });
