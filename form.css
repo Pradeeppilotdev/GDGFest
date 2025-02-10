@@ -305,3 +305,43 @@ input[type="submit"]:hover {
     border: 1px solid var(--light-border);
     color: var(--light-text);
 }
+
+.payment-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.razorpay-button {
+    background-color: var(--google-blue);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 1rem 0;
+}
+
+.razorpay-button:hover {
+    background-color: var(--google-blue-hover);
+}
+
+.payment-status {
+    margin: 1rem 0;
+    font-weight: 500;
+    color: var(--light-text-secondary);
+}
+
+.payment-success {
+    color: var(--google-green);
+}
+
+#submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

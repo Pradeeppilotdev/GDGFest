@@ -53,11 +53,6 @@
             <label for="Only Workshop - ₹150">Only Workshop - ₹150</label>
         </div>
 
-        <div class="radio-group">
-            <input type="radio" id="One Technical & one Non-Technical Events - ₹150" name="entry.387616278" value="One Technical & one Non-Technical Events - ₹150">
-            <label for="One Technical & one Non-Technical Events - ₹150">One Technical & one Non-Technical Events - ₹150</label>
-        </div>
-
         <label>Flagship Events (Select any one or None):</label><br>
 
         <div class="radio-group">
@@ -124,18 +119,100 @@
             <label for="None_3">None</label>
         </div>
 
-        <input type="submit" value="Submit">
+        <!-- Add payment section -->
+        <div id="paymentSection" style="display: none;">
+            <label>Complete Payment to Enable Form Submission:</label>
+            <div id="paymentAmount" class="payment-info"></div>
+            <button type="button" id="payButton" class="razorpay-button">Pay Now</button>
+            <div id="paymentStatus" class="payment-status">Payment Pending</div>
+        </div>
+
+        <input type="submit" value="Submit" id="submitButton" disabled>
     </form>
 
     <div id="thankYouMessage" style="display:None;">
         <p>Your response has been recorded. Thank you!</p>
     </div>
 
+    <!-- Add Razorpay SDK -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
         $(document).ready(function() {
+            let paymentComplete = false;
+            
+            // Handle package selection
+            $('input[name="entry.387616278"]').change(function() {
+                const selectedPackage = $(this).val();
+                const paymentSection = $('#paymentSection');
+                const paymentAmount = $('#paymentAmount');
+                let amount = 0;
+
+                if (selectedPackage.includes('₹250')) {
+                    amount = 250;
+                } else if (selectedPackage.includes('₹200')) {
+                    amount = 200;
+                } else if (selectedPackage.includes('₹150')) {
+                    amount = 150;
+                }
+
+                if (amount > 0) {
+                    paymentAmount.html(`Amount to Pay: ₹${amount}`);
+                    paymentSection.show();
+                } else {
+                    paymentSection.hide();
+                }
+            });
+
+            // Razorpay payment handling
+            $('#payButton').click(function() {
+                const selectedPackage = $('input[name="entry.387616278"]:checked').val();
+                let amount = 0;
+
+                if (selectedPackage.includes('₹250')) {
+                    amount = 25000; // Amount in paise
+                } else if (selectedPackage.includes('₹200')) {
+                    amount = 20000;
+                } else if (selectedPackage.includes('₹150')) {
+                    amount = 15000;
+                }
+
+                const options = {
+                    key: 'rzp_live_H265JQ8SGsz6MH', // Replace with your Razorpay key
+                    amount: amount,
+                    currency: 'INR',
+                    name: 'GDGFEST',
+                    description: 'Event Registration Payment',
+                    handler: function(response) {
+                        // Payment successful
+                        paymentComplete = true;
+                        $('#paymentStatus').html('Payment Successful').addClass('payment-success');
+                        $('#submitButton').prop('disabled', false);
+                        $('#payButton').prop('disabled', true);
+                    },
+                    prefill: {
+                        name: $('#Name').val(),
+                        email: $('#Mailid').val(),
+                        contact: $('#Mobilenumber').val()
+                    },
+                    theme: {
+                        color: '#4285F4'
+                    }
+                };
+
+                const rzp = new Razorpay(options);
+                rzp.open();
+            });
+
+            // Form submission
             $('#gdgForm').submit(function(event) {
-                event.preventDefault(); // Prevent the default form submission
-                var formData = $(this).serialize(); // Serialize the form data
+                if (!paymentComplete) {
+                    event.preventDefault();
+                    alert('Please complete the payment first');
+                    return;
+                }
+
+                event.preventDefault();
+                var formData = $(this).serialize();
 
                 console.log('Submitting form data: ', formData); // Debugging: Log form data
 
