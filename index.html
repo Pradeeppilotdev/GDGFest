@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="icon" href="images/Untitled design (3).png" type="image/x-icon">
-    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            const button = document.getElementById('dark-mode-btn');
+            button.textContent = isDarkMode ? '🌞' : '🌙';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('dark-mode-btn').textContent = '🌞';
+            }
+        });
+    </script>
 </head>
 <body>
+    <button id="dark-mode-btn" onclick="toggleDarkMode()" class="dark-mode-btn">🌙</button>
     <center>
     <img src="images\zoom.jpg" alt="GDGFEST" id="gdgmainlogo">
     </center>
@@ -133,7 +150,7 @@
             <h3>Free fire</h3>
             <center>
             <p>Unleash your gaming skills</p>
-            <p>Gamers assemble !!! HAHA cool </p> 
+            <p>Gamers assemble !!! HAHA cool ser  </p> 
             <p>BOOYAH!!</p>
             <a href="eventindetail.html"><button>KNOW MORE</button></a>
             </center>
@@ -143,7 +160,7 @@
             <h3>Anime quiz</h3>
             <center>
             <p>Anime how should I pronounce it?</p>
-            <p>Anyway you guys are here</p> 
+            <p>Anyway you guys are here right</p> 
             <p>It's going to be fire!!</p>
             <a href="eventindetail.html"><button>KNOW MORE</button></a>
             </center>
@@ -152,7 +169,7 @@
             <img src="images/black and white logo for connections game.png" alt="gdglogo" id="googledevlogo">
             <h3>Connections</h3>
             <center>
-            <p>Seems an interesting one..! Right?</p>
+            <p>Seems an interesting one..! Right?....</p>
             <p>You're a pro at finding it?</p> 
             <p>show us</p>
             <a href="eventindetail.html"><button>KNOW MORE</button></a>

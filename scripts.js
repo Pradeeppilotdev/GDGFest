@@ -1,30 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() { 
   const swiper = new Swiper('.slider-wrapper', {
-    mousewheel: {
-      forceToAxis: true,
-      invert: false,
-      sensitivity: 1, // Adjust sensitivity to better control scrolling
-    },
-    cssMode: false, // Disable cssMode for now
+    mousewheel: false,
+    cssMode: false,
     loop: false, 
-    grabCursor: true, 
-    spaceBetween: 45, 
-    pagination: { 
-      el: '.swiper-pagination', 
-      clickable: true, 
-      dynamicBullets: true, 
-    }, 
+    grabCursor: true,
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    centeredSlides: false,
+    watchOverflow: true,
     navigation: { 
-      nextEl: '.swiper-button-next', 
-      prevEl: '.swiper-button-prev', 
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     }, 
     scrollbar: {
       el: '.swiper-scrollbar',
+      draggable: true,
+    },
+    grid: {
+      rows: 1,
     },
     breakpoints: { 
-      0: { slidesPerView: 1 }, 
-      620: { slidesPerView: 2 }, 
-      1024: { slidesPerView: 3 },
+      0: { 
+        slidesPerView: 1,
+        spaceBetween: 20,
+        width: null
+      }, 
+      768: { 
+        slidesPerView: 2,
+        spaceBetween: 25,
+        width: null
+      }, 
+      1024: { 
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        slidesPerGroup: 1
+      }
     }
   });
 

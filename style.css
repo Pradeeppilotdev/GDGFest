@@ -165,6 +165,12 @@ body {
     transform: translate(-0.2rem,-0.2ex);
 }
 
+body.dark-mode .aboutsection button {
+    background-color: #fdfcfc;
+    color: rgb(8, 8, 8);
+    border: 2px solid rgb(12, 12, 12);
+}
+
 .aboutsection h1 {
     font-size: 2.5rem;
     display: flex;
@@ -250,7 +256,7 @@ body {
     font-palette: --mypalette;
     base-palette: 3;
     override-colors: 6 #FFB978;
-    background-color: rgba(10, 10, 10, 0.525);
+    background-color: rgba(255, 253, 253, 0.867);
     backdrop-filter: blur(13px);
     font-size: 4rem;
     display: flex;
@@ -461,8 +467,127 @@ body {
     text-decoration: none;
 }
 
+.dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(0.6px);
+    -webkit-backdrop-filter: blur(0.6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.dark-mode-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
 
+.dark-mode .dark-mode-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .dark-mode-btn:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode {
+    background-color: #1f1f1f;
+}
+
+.dark-mode .aboutsection {
+    background-color: #4285F4;
+    filter: brightness(0.85);
+}
+
+.dark-mode .aboutgdgfest {
+    background-color: #F4B400;
+    filter: brightness(0.85);
+}
+
+.dark-mode .timer {
+    background-color: #DB4437;
+    filter: brightness(0.85);
+}
+
+.dark-mode .Events {
+    background-color: #0F9D58;
+    filter: brightness(0.85);
+}
+
+.dark-mode .maps {
+    background-color: #4285F4;
+    filter: brightness(0.85);
+}
+
+.dark-mode .contact {
+    background-color: #0F9D58;
+    filter: brightness(0.85);
+}
+
+.dark-mode .Agenda {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .card-list .cards1 {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode p {
+    color: #ffffff;
+}
+
+.dark-mode button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Large screen adjustments (1025px and above) */
+@media (min-width: 1025px) {
+    .aboutsection,
+    .aboutgdgfest,
+    .timer,
+    .Events {
+        padding: 5rem;
+        margin: 5rem auto;
+        max-width: 1200px;
+        width: 90%;
+    }
+
+    .card-list {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .card-list .cards1 {
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+}
 
 /*View for mobile devices*/
 @media (max-width: 1024px) {
@@ -641,3 +766,19 @@ body {
       
 }
 
+@media (min-width: 1024px) {
+    .swiper-slide {
+        width: calc((100% - 60px) / 3) !important;
+        margin-right: 30px !important;
+    }
+    
+    .slider-wrapper {
+        padding-bottom: 50px;  /* Space for scrollbar */
+    }
+
+    .swiper-scrollbar {
+        bottom: 0 !important;
+        margin: 0 20px;
+        width: calc(100% - 40px) !important;
+    }
+}
