@@ -213,6 +213,135 @@ body.dark-mode .aboutsection button {
     justify-content: center;
     color: rgba(0, 0, 0, 0.762);
 }
+.organizers {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    padding: 5rem;
+    margin: 10rem;
+    background-color: #0F9D58;
+    text-align: center;
+}
+
+.organizers h2 {
+    width: 100%;
+    text-align: center;
+    color: rgb(13, 13, 13);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+   
+}
+
+.organizers-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(255, 253, 253, 0.867);
+    backdrop-filter: blur(13px);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.organizers-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styles */
+.organizers-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.organizers-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.organizers-container::-webkit-scrollbar-thumb {
+    background: #0F9D58;
+    border-radius: 4px;
+}
+
+.organizers-container::-webkit-scrollbar-thumb:hover {
+    background: #0b8043;
+}
+
+.organizer-card {
+    flex: 0 0 auto;
+    width: 250px;
+    text-align: center;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.organizer-card:hover {
+    transform: translateY(-5px);
+}
+
+.organizer-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.organizer-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: block;
+    border: 4px solid #0F9D58;
+    padding: 4px;
+    transition: transform 0.3s ease;
+}
+
+.organizer-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.organizer-card:hover .organizer-img {
+    transform: scale(1.05);
+    border-color: #0b8043;
+}
+
+@media (max-width: 768px) {
+    .organizers {
+        padding: 2rem;
+        margin: 2rem auto;
+        margin-bottom: 100px;
+        width: calc(100% - 4rem);
+        max-width: 90%;
+    }
+
+    .organizer-card {
+        width: 200px;
+        padding: 1rem;
+    }
+
+    .organizer-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .organizer-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
 .timer {
     display: flex;
     flex: 1;
@@ -830,6 +959,106 @@ body.dark-mode .aboutsection button {
         justify-content: center;
         gap: 2rem;
         width: 100%;
+    }
+}
+
+.organizers-section {
+    padding: 4rem 2rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+}
+
+.organizers-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #4285F4;
+    font-size: 2.5rem;
+}
+
+.organizers-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styles */
+.organizers-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.organizers-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.organizers-container::-webkit-scrollbar-thumb {
+    background: #4285F4;
+    border-radius: 4px;
+}
+
+.organizers-container::-webkit-scrollbar-thumb:hover {
+    background: #3367D6;
+}
+
+.organizer-card {
+    flex: 0 0 auto;
+    width: 200px;
+    background: hsla(0, 0%, 100%, 0.681);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.615);
+    box-shadow: 10px 10px 3px rgb(18, 18, 18);
+    overflow: hidden;
+    transition: 0.15s ease-in-out;
+    scroll-snap-align: start;
+    padding: 1rem;
+}
+
+.organizer-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.organizer-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    border: 3px solid #4285F4;
+    padding: 3px;
+    transition: transform 0.3s ease;
+}
+
+.organizer-card h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.organizer-card:hover .organizer-img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .organizers-section {
+        padding: 2rem 1rem;
+    }
+
+    .organizer-card {
+        width: 160px;
+    }
+
+    .organizer-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .organizer-card h3 {
+        font-size: 1rem;
     }
 }
 
