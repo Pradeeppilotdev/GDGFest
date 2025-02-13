@@ -217,6 +217,7 @@ body.dark-mode .aboutsection button {
     display: flex;
     flex: 1;
     flex-direction: column;
+    position: relative;
     align-items: center;
     gap: 1rem;
     border: 1.5px solid rgb(0, 0, 0);
@@ -238,6 +239,7 @@ body.dark-mode .aboutsection button {
 }
 
 .organizers-wrapper {
+    position: relative;
     width: 100%;
     overflow: hidden;
     background-color: rgba(21, 21, 21, 0.656);
