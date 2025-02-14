@@ -1150,11 +1150,13 @@ body.dark-mode{
     margin-top: 3rem;
     padding: 2rem;
     border-top: 1px solid #ddd;
+    background-color: #dddddde6;
 }
 
 .rules-footer p {
     margin: 0.5rem 0;
-    color: #666;
+    color: #151414;
+   
     font-size: 1.2rem;
 }
 
