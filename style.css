@@ -17,6 +17,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+    background-image: url(images/background.png);
+    background-position: center center;
+    background-size: contain;
 }
 .swiper-container {
     width: 100%;
@@ -169,6 +172,9 @@ body.dark-mode .aboutsection button {
     background-color: #fdfcfc;
     color: rgb(8, 8, 8);
     border: 2px solid rgb(12, 12, 12);
+}
+body.dark-mode{
+    background-blend-mode: color;
 }
 
 
