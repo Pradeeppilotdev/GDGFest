@@ -20,6 +20,7 @@ body {
     background-image: url(../images/background.png);
     background-position: center center;
     background-size: contain;
+    backdrop-filter: blur(2.1px);
 }
 .swiper-container {
     width: 100%;
@@ -146,7 +147,7 @@ body {
     padding: 10rem;
     margin: 10rem;
     background-color: #4285F4;
-    text-align: center;
+    text-align: center; 
 }
 .aboutsection button{
     margin-top: 2rem;
@@ -1081,6 +1082,9 @@ body.dark-mode{
     margin-bottom: 3rem;
     color: #4285F4;
     font-size: 2.5rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #f3edede4;
 }
 
 .rules-container {
