@@ -17,10 +17,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    background-image: url(../images/background.png);
+    background-image:url(../images/bgforbody.png);
     background-position: center center;
     background-size: contain;
-    backdrop-filter: blur(2.1px);
+    backdrop-filter: blur(1px);
 }
 .swiper-container {
     width: 100%;
