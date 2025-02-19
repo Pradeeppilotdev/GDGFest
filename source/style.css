@@ -11,7 +11,7 @@
     font-family: 'Google Sans', serif;
     box-sizing: border-box;
 }
-
+/* for whole element*/
 body {
     display: flex;
     flex-direction: column;
